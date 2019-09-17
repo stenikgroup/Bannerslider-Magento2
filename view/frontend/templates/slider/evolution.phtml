@@ -50,8 +50,9 @@ $slider = $block->getSlider();
         <div class="magestore-bannerslider-evolution-slider-<?php echo $slider->getId(); ?>" style="margin:auto; width: <?php echo $slider->getWidth() ?>px; height: <?php echo $slider->getHeight() ?>px;">
             <?php foreach ($block->getBannerCollection() as $banner) :
             ?>
+                <?php $promoTagsBlock = $this->getLayout()->createBlock('Magestore\Bannerslider\Block\Widget\PromoTags')->setBanner($banner); ?>
                 <div>
-                    <a href="<?php echo $banner->getClickUrl() ?>" target="<?php echo $banner->getTargetValue() ?>" style="display:block;" data-mage-init='{"magestore/clickbanner": {"url": "<?php echo $this->getUrl("bannerslider/index/click") ?>", "slider_id": "<?php echo $banner->getSliderId() ?>", "banner_id": "<?php echo $banner->getId() ?>" }}' >
+                    <a <? echo $promoTagsBlock->toHtml(); ?> href="<?php echo $banner->getClickUrl() ?>" target="<?php echo $banner->getTargetValue() ?>" style="display:block;" data-mage-init='{"magestore/clickbanner": {"url": "<?php echo $this->getUrl("bannerslider/index/click") ?>", "slider_id": "<?php echo $banner->getSliderId() ?>", "banner_id": "<?php echo $banner->getId() ?>" }}' >
                     <img style="width: <?php echo $slider->getWidth() ?>px; height: <?php echo $slider->getHeight() ?>px;" alt="<?php echo $banner->getImageAlt() ?>"  src="<?php echo $block->getBannerImageUrl($banner) ?>"/>
                     </a>
                 </div>

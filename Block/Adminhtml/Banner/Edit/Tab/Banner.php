@@ -246,6 +246,45 @@ class Banner extends \Magento\Backend\Block\Widget\Form\Generic implements \Mage
             ]
         );
 
+        $elements['promo_id'] = $fieldset->addField(
+            'promo_id',
+            'text',
+            [
+                'title' => __('Promo ID'),
+                'label' => __('Promo ID'),
+                'name' => 'promo_id',
+            ]
+        );
+
+        $elements['promo_name'] = $fieldset->addField(
+            'promo_name',
+            'text',
+            [
+                'title' => __('Promo Name'),
+                'label' => __('Promo Name'),
+                'name' => 'promo_name',
+            ]
+        );
+
+        $elements['promo_creative'] = $fieldset->addField(
+            'promo_creative',
+            'text',
+            [
+                'title' => __('Promo Creative'),
+                'label' => __('Promo Creative'),
+                'name' => 'promo_creative',
+            ]
+        );
+        $elements['promo_position'] = $fieldset->addField(
+            'promo_position',
+            'text',
+            [
+                'title' => __('Promo Position'),
+                'label' => __('Promo Position'),
+                'name' => 'promo_position',
+            ]
+        );
+
         $elements['image'] = $fieldset->addField(
             'image',
             'image',

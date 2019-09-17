@@ -181,7 +181,11 @@ class Banner extends \Magento\Framework\Model\AbstractModel
             'target',
             'image_alt',
             'image',
-            'caption'
+            'caption',
+            'promo_id',
+            'promo_name',
+            'promo_creative',
+            'promo_position'
         );
     }
 
